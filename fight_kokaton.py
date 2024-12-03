@@ -222,8 +222,9 @@ def main():
                 beams.append(Beam(bird))  # スペースキー押下でBeamインスタンス生成，リストにappend
         screen.blit(bg_img, [0, 0])
         
-        for bomb in bombs:
-            if bird.rct.colliderect(bomb.rct):
+        for bomb in bombs: 
+        #こうかとんと爆弾の当たり判定
+            if bird.rct.colliderect(bomb.rct): 
                 bird.change_img(8, screen)
                 fonto = pg.font.Font(None, 80)
                 txt = fonto.render("GAME OVER", True, (255, 0, 0))
